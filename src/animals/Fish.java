@@ -15,16 +15,34 @@ public class Fish {
 
     public String bubble(String size) {
         String bubble = "";
-        if (size.equalsIgnoreCase("small")) {
-            return "Bubble";
-        } else if (size.equalsIgnoreCase("medium")) {
-            return "Bubble, bubble";
-        } else if (size.equalsIgnoreCase("large")) {
-            return "Bubble, BUBBLE!";
-        } else {
-            return "Sorry, I seem to have lost my voice!";
+
+        switch (size.toLowerCase()) {
+
+            case "small":
+                return "Bubble";
+
+            case "medium":
+                return "Bubble, bubble";
+
+            case "large":
+                return "BUBBLE BUBBLE!";
+
+            default:
+                return "error, please tell me how big you fishy is";
+
         }
+
     }
+//        if (size.equalsIgnoreCase("small")) {
+//            return "Bubble";
+//        } else if (size.equalsIgnoreCase("medium")) {
+//            return "Bubble, bubble";
+//        } else if (size.equalsIgnoreCase("large")) {
+//            return "Bubble, BUBBLE!";
+//        } else {
+//            return "Sorry, I seem to have lost my voice!";
+//        }
+
 
     public String beHuman(String name, int age, String breed) {
         return "Hello human, I'm " + name + " and I am a " + age + " year old "

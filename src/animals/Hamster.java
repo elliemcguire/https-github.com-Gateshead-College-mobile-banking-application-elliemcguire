@@ -15,16 +15,34 @@ public class Hamster {
 
     public String squeak(String size) {
         String squeak = "";
-        if (size.equalsIgnoreCase("small")) {
-            return "Squeak";
-        } else if (size.equalsIgnoreCase("medium")) {
-            return "Squeak, squeak";
-        } else if (size.equalsIgnoreCase("large")) {
-            return "Squeak, SQUEAK!";
-        } else {
-            return "Sorry, I seem to have lost my voice!";
+
+        switch (size.toLowerCase()) {
+
+            case "small":
+                return "Squeak";
+
+            case "medium":
+                return "Squeak, squeak";
+
+            case "large":
+                return "SQUEAK SQUEAK!";
+
+            default:
+                return " error, please tell me how big ur hammy is";
+
         }
     }
+
+//        if (size.equalsIgnoreCase("small")) {
+//            return "Squeak";
+//        } else if (size.equalsIgnoreCase("medium")) {
+//            return "Squeak, squeak";
+//        } else if (size.equalsIgnoreCase("large")) {
+//            return "Squeak, SQUEAK!";
+//        } else {
+//            return "Sorry, I seem to have lost my voice!";
+//        }
+
 
     public String beHuman(String name, int age, String breed) {
         return "Hello human, I'm " + name + " and I am a " + age + " year old "
