@@ -2,10 +2,10 @@ package songs;
 
 import java.util.Scanner;
 
-public class hhd {
+public class hdd {
 
     public static void main(String[] args) {
-        hhd hdd = new hhd();
+        hdd hdd = new hdd();
         hdd.sing();
     }
 

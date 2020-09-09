@@ -16,22 +16,13 @@ public class CreateAnimal {
         String animal = myScanner.nextLine();
 
         switch (animal.toLowerCase()) {
-
-            case "dog":
-                createDog();
-                break;
-
-            case "cat":
-                createCat();
-                break;
-
-            case "fish":
-                createFish();
-                break;
-
-            default:
+            case "dog" -> createDog();
+            case "cat" -> createCat();
+            case "fish" -> createFish();
+            default -> {
                 System.out.println(animal + " is not a type of animal we can currently create, please try again");
                 getAnimalType();
+            }
         }
 
 
