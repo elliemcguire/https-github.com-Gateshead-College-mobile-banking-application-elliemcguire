@@ -2,10 +2,10 @@ package codingactivities;
 
 import java.util.Scanner;
 
-public class Tasks {
+public class Age {
 
     public static void main(String[] args) {
-        Tasks.task();
+        Age.task();
     }
 
     private static void task() {
