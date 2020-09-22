@@ -31,19 +31,23 @@ public class Login {
 
         for (User u : users) {
             if (inputUsername.equalsIgnoreCase(u.getUsername()) && inputPassword.equals(u.getPassword())) {
-                    MainMenu mm = new MainMenu(u);
-                    break;
-                } else if (counter == users.size()) {
-                    attempts++;
-                    if (attempts < 3) {
-                        System.out.println("Incorrect details provided,please try again.");
-                        getUserDetails();
-                    } else {
-                        System.out.println("You have exceeded the number of login attempts, please try again later!");
-                    }
+                MainMenu mm = new MainMenu(u);
+                break;
+            } else if (counter == users.size()) {
+                attempts++;
+                if (attempts < 3) {
+                    System.out.println("Incorrect details provided,please try again.");
+                    getUserDetails();
+                } else {
+                    System.out.println("You have exceeded the number of login attempts, please try again later!");
                 }
-                counter++;
             }
+            counter++;
+        }
+        if (attempts < 2) {
+            attempts = 0;
+            getUserDetails();
         }
     }
+}
 

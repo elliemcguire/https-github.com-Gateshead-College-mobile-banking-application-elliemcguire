@@ -60,9 +60,10 @@ public class MainMenu {
                 break;
 
             case 4:
-                logout();
-                System.out.println("Logout option selected.");
-                break;
+                return;
+//                logout();
+//                System.out.println("Logout option selected.");
+//                break;
 
             default:
                 System.out.println("Invalid option selected please choose option between 1-4.");
@@ -117,7 +118,7 @@ public class MainMenu {
         if(accountType != null) {
             Account a = new Account(0004, 0.0, accountType, new ArrayList<>());
             user.addNewAccounts(a);
-//            displayMenu();
+            displayMenu();
         }
     }
 
