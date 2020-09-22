@@ -18,30 +18,20 @@ public class User {
     }
 
     public String getUsername() { return username; }
-
     public void setUsername(String username) { this.username = username; }
 
     public String getPassword() { return password; }
-
     public void setPassword(String password) { this.password = password; }
 
     public String getForename() { return forename; }
-
     public void setForename(String forename) { this.forename = forename; }
 
     public String getSurname() { return surname; }
-
     public void setSurname(String surname) { this.surname = surname; }
 
-    public ArrayList<Account> getAccounts() {
-        return accounts;
-    }
+    public ArrayList<Account> getAccounts() { return accounts; }
+    public void setAccounts(ArrayList<Account> accounts) { this.accounts = accounts; }
 
-    public void setAccounts(ArrayList<Account> accounts) {
-        this.accounts = accounts;
-    }
+    public void addNewAccounts(Account a) { accounts.add(a); }
 
-    public void addNewAccounts(Account a) {
-        accounts.add(a);
-    }
 }

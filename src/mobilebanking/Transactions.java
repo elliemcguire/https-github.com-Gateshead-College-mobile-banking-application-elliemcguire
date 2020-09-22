@@ -30,4 +30,5 @@ public class Transactions {
     public void setTransactionAmount(double transactionAmount) {
         this.transactionAmount = transactionAmount;
     }
+
 }

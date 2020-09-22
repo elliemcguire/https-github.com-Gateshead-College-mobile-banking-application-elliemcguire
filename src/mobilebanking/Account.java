@@ -38,4 +38,6 @@ public class Account {
 
     public ArrayList<Transactions> getTransactions() { return transactions; }
     public void setTransactions(ArrayList<Transactions> transactions) { this.transactions = transactions; }
+
+    public void addTransaction(Transactions t) { transactions.add(t); }
 }
