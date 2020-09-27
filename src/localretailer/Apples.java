@@ -1,4 +1,4 @@
-package local_retailer;
+package localretailer;
 
 public class Apples {
 

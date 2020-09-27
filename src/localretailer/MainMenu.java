@@ -1,4 +1,4 @@
-package local_retailer;
+package localretailer;
 
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -6,11 +6,14 @@ import java.util.Scanner;
 public class MainMenu {
 
     Scanner myScanner = new Scanner(System.in);
+    private User user;
+
 
     public static void main(String[] args) {
         MainMenu mainMenu = new MainMenu();
         mainMenu.displayMenu();
     }
+
 
     public void displayMenu() {
         Scanner myScanner = new Scanner(System.in);
@@ -28,7 +31,7 @@ public class MainMenu {
             case 1:
                 ArrayList<Bananas> bananas = bananasArrayList();
                 for (Bananas b : bananas) {
-                    System.out.println("You have chosen Bananas");
+                    System.out.println("You have chosen " + b.getFruitType());;
                     System.out.println("Product price: " + b.getBananasPrice());
                     System.out.println("Product ID: " + b.getBananasID());
                     System.out.println("Product stock: " + b.getBananasStock());
@@ -41,7 +44,6 @@ public class MainMenu {
                     System.out.println("Product price: " + o.getOrangesPrice());
                     System.out.println("Product ID: " + o.getOrangesID());
                     System.out.println("Product stock: " + o.getOrangesStock());
-                    
                 }
                 break;
             case 3:
@@ -58,13 +60,14 @@ public class MainMenu {
                 displayMenu();
         }
 
+
     }
 
     private ArrayList<Bananas> bananasArrayList() {
         ArrayList<Bananas> bananas = new ArrayList<>();
-        bananas.add(new Bananas("£3.00", 1, 40));
-        bananas.add(new Bananas("£2.00", 2, 30));
-        bananas.add(new Bananas("£1.50", 3, 50));
+        bananas.add(new Bananas("Banana", "3.00", 1, 40));
+        bananas.add(new Bananas("Banana", "1.50", 2, 45));
+        bananas.add(new Bananas("Banana", "2.00", 3,50));
         return bananas;
     }
 
