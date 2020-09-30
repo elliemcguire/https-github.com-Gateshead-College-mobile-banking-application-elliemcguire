@@ -1,5 +1,6 @@
 package mobilebanking;
 
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -8,16 +9,17 @@ public class Login {
     int attempts = 0;
     ArrayList<User> users;
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws SQLException {
         Login login = new Login();
         login.getApplicationData();
         login.getUserDetails();
     }
 
-    private void getApplicationData() {
-        InitDB.initialiseDB();
-        Initialise init = new Initialise();
-        users = init.seedData();
+    private void getApplicationData() throws SQLException {
+        InitDB.databaseStartup();
+//        InitDB.initialiseDB();
+//        Initialise init = new Initialise();
+//        users = init.seedData();
     }
 
     private void getUserDetails() {
