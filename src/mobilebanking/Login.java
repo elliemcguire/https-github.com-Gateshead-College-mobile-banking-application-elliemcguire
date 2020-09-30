@@ -4,8 +4,6 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Login {
-//    String correctUsername = "EllieMcGuire";
-//    String correctPassword = "password";
 
     int attempts = 0;
     ArrayList<User> users;
@@ -17,6 +15,7 @@ public class Login {
     }
 
     private void getApplicationData() {
+        InitDB.initialiseDB();
         Initialise init = new Initialise();
         users = init.seedData();
     }
@@ -49,5 +48,6 @@ public class Login {
             getUserDetails();
         }
     }
+
 }
 

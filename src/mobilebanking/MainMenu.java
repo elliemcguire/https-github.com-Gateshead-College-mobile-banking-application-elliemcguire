@@ -37,7 +37,21 @@ public class MainMenu {
         System.out.println("Please select an option from the menu above");
         byte choice = Byte.parseByte(myScanner.nextLine());
         processChoice(choice);
+
+
+//        public static void main {
+//
+//            try {
+//                int arr[] = {1, 2, 3, 4, 5};
+//                System.out.println(arr[7]);
+//            }
+//            catch (ArrayIndexOutOfBoundsException e) {
+//                System.out.println("The specified index does not exist " + "in array. Please correct the error.");
+//            }
+//        }
     }
+
+
 
     private void processChoice(byte choice) {
 
@@ -59,9 +73,9 @@ public class MainMenu {
                 break;
 
             case 4:
-                logout();
+//                logout();
                 System.out.println("Logout option selected.");
-                break;
+                return;
 
             default:
                 System.out.println("Invalid option selected please choose option between 1-4.");
@@ -70,16 +84,16 @@ public class MainMenu {
         displayMenu();
     }
 
-    private void logout() {
-        System.out.println("Hello, " + user.getForename());
-        System.out.println("Are you sure you want to logout? (y/n)");
-        String choice = myScanner.nextLine();
-        if (choice.equalsIgnoreCase("y")) {
-            newCustomer();
-        } else {
-            displayMenu();
-        }
-    }
+//    private void logout() {
+//        System.out.println("Hello, " + user.getForename());
+//        System.out.println("Are you sure you want to logout? (y/n)");
+//        String choice = myScanner.nextLine();
+//        if (choice.equalsIgnoreCase("y")) {
+//            newCustomer();
+//        } else {
+//            displayMenu();
+//        }
+//    }
 
     private void openAccount() {
         System.out.println("Thanks for choosing to open a new account with us!");
@@ -127,7 +141,9 @@ public class MainMenu {
         String choice = myScanner.nextLine();
         if (choice.equalsIgnoreCase("y")) {
             System.out.println("WARNING: any money in this account will be lost");
-            viewAccount();
+            System.out.println("Would you like to continue? (y/n)");
+            if (choice.equalsIgnoreCase("y")) {
+            } viewAccount();
         } else {
             closeAccount();
         }
